@@ -301,3 +301,87 @@ section {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+.section-philosophy {
+  padding: 60px 20px;
+  background-color: #0c0c0c;
+  color: #fff;
+  text-align: center;
+}
+
+.section-philosophy h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff4d4d;
+}
+
+.philosophy-item {
+  background-color: #1a1a1a;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  text-align: left;
+}
+
+.philosophy-item h3 {
+  color: #ff6666;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.philosophy-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.section-abilities {
+  padding: 60px 20px;
+  background-color: #0c0c0c;
+  color: #fff;
+  text-align: center;
+}
+
+.section-abilities h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff4d4d;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  transition: transform 0.3s, background-color 0.3s;
+  text-align: center;
+}
+
+.card img {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: #ff6666;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #ff1a1a;
+  cursor: pointer;
+}

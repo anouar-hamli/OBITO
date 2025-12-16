@@ -1,0 +1,77 @@
+/* ===== Biography Section ===== */
+.section-biography {
+  padding: 60px 20px;
+  background-color: #0c0c0c;
+  color: #fff;
+}
+
+.section-biography h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff4d4d;
+}
+
+.biography-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.biography-image {
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  flex-shrink: 0; /* منع التصغير */
+}
+
+.biography-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .biography-content {
+    gap: 30px;
+    max-width: 90%;
+  }
+  
+  .biography-image {
+    width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .biography-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .biography-image {
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  .biography-text {
+    text-align: center;
+  }
+  
+  .section-biography h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-biography {
+    padding: 40px 15px;
+  }
+  
+  .biography-text {
+    font-size: 1rem;
+  }
+}

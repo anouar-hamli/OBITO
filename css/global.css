@@ -1,0 +1,42 @@
+/* ===== Global ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0c0c0c;
+  color: #fff;
+  scroll-behavior: smooth;
+  padding-top: 70px;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  color: #ff3b3b;
+}
+
+/* ===== Sections ===== */
+section {
+  min-height: auto;
+  padding: 80px 15px 40px; 
+  text-align: center;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; 
+  }
+  
+  section {
+    padding: 60px 10px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 50px 8px 25px;
+  }
+}

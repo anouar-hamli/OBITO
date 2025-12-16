@@ -1,0 +1,70 @@
+/* ===== Philosophy Section ===== */
+.section-philosophy {
+  padding: 60px 20px;
+  background-color: #0c0c0c;
+}
+
+.section-philosophy h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ff4d4d;
+}
+
+.philosophy-item {
+  background-color: #1a1a1a;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  text-align: left;
+}
+
+.philosophy-item h3 {
+  color: #ff6666;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.philosophy-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .philosophy-item {
+    max-width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy-item {
+    padding: 15px;
+    margin: 15px auto;
+  }
+  
+  .philosophy-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .philosophy-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .section-philosophy h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-philosophy {
+    padding: 40px 15px;
+  }
+  
+  .philosophy-item {
+    padding: 12px;
+  }
+}

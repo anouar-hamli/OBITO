@@ -1,0 +1,102 @@
+/* ===== Quotes Section ===== */
+.section-quotes {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0c0c0c, #1a1a1a);
+}
+
+.section-quotes h2 {
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 40px;
+}
+
+.quote {
+  position: relative;
+  background: rgba(30, 30, 30, 0.8);
+  margin: 20px auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.quote::before {
+  content: '“';
+  font-size: 3rem;
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  color: #ff6666;
+  opacity: 0.3;
+}
+
+.quote::after {
+  content: '”';
+  font-size: 3rem;
+  position: absolute;
+  bottom: -15px;
+  right: 15px;
+  color: #ff6666;
+  opacity: 0.3;
+}
+
+.quote p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.quote:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .quote {
+    margin: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-quotes {
+    padding: 60px 15px;
+  }
+  
+  .quote {
+    padding: 20px 25px;
+    margin: 15px auto;
+  }
+  
+  .quote p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .section-quotes h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-quotes {
+    padding: 50px 10px;
+  }
+  
+  .quote {
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+  
+  .quote p {
+    font-size: 1rem;
+  }
+  
+  .quote::before,
+  .quote::after {
+    font-size: 2.5rem;
+  }
+}

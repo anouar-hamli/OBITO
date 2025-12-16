@@ -1,0 +1,233 @@
+/* ===== Navbar (FINAL FIX) ===== */
+.obito-navbar {
+  position: fixed;              /* ✅ ثابتة دائما */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: transparent;      /* شفافة فوق الفيديو */
+  transition:
+    background 0.4s ease,
+    backdrop-filter 0.4s ease,
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+/* Navbar after scroll */
+.obito-navbar.scrolled {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.95),
+    rgba(10,0,0,0.85)
+  );
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 40px rgba(255,0,0,0.15);
+}
+
+/* Hide on scroll down */
+.obito-navbar.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* Navbar content */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+}
+
+/* ===== Logo Image ===== */
+.nav-logo {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+
+  filter: drop-shadow(0 0 8px rgba(255,0,0,0.6));
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.nav-logo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 14px rgba(255,0,0,0.9));
+}
+
+.obito-navbar.scrolled .nav-logo img {
+  filter: drop-shadow(0 0 16px rgba(255,0,0,0.9));
+}
+
+/* ===== Links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 8px 5px;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+.obito-navbar.scrolled .nav-links a {
+  color: rgba(255,255,255,0.95);
+}
+
+/* underline pain effect */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== Menu Toggle Button ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ===== Pain Line ===== */
+.pain-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, red, transparent);
+  opacity: 0.6;
+}
+
+/* ===== Responsive Styles ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 12px 30px;
+  }
+  
+  .nav-links {
+    gap: 18px;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 10px 20px;
+  }
+  
+  .nav-logo {
+    width: 36px;
+    height: 36px;
+  }
+  
+  /* Hide desktop menu, show mobile toggle */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-links a {
+    display: block;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+    width: 100%;
+  }
+  
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  
+  /* Show menu toggle */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Adjust pain line */
+  .pain-line {
+    display: none; /* يمكن إخفاؤه على الموبايل إذا كان يسبب مشاكل */
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 8px 15px;
+  }
+  
+  .nav-logo {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .menu-toggle {
+    font-size: 1.6rem;
+  }
+  
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 18px 0;
+  }
+}

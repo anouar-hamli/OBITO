@@ -1,0 +1,94 @@
+/* ===== My Connection Section ===== */
+.section-my-connection {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0c0c0c, #1a1a1a);
+}
+
+.section-my-connection h2 {
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 40px;
+}
+
+.connection-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.my-image {
+  flex-shrink: 0;
+}
+
+.my-image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #ff4d4d;
+  box-shadow: 0 10px 25px rgba(255,0,0,0.5);
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.my-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(255,0,0,0.7);
+}
+
+.connection-text {
+  flex: 1;
+}
+
+.connection-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .connection-content {
+    gap: 30px;
+    max-width: 90%;
+  }
+  
+  .my-image img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-my-connection {
+    padding: 60px 15px;
+  }
+  
+  .connection-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .connection-text p {
+    text-align: center;
+  }
+  
+  .section-my-connection h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-image img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .connection-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
